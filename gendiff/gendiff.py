@@ -25,7 +25,7 @@ def generate_diff(file1_path, file2_path):
     dict1 = get_data(file1_path)
     dict2 = get_data(file2_path)
     dict3 = {}
-    for k in sorted(dict1.keys()|dict2.keys()):
+    for k in sorted(dict1.keys() | dict2.keys()):
         if k in dict1 and k in dict2:
             dict3[k] = [dict1[k], dict2[k]]
         elif k in dict1 and k not in dict2:
