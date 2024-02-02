@@ -6,7 +6,7 @@ def get_data(file):
         return json.load(file)
 
 
-def to_format(dct):
+def to_string(dct):
     result = '{\n'
     for k, v in dct.items():
         if v[0] == ' ':
@@ -21,6 +21,19 @@ def to_format(dct):
     return result + '}'
 
 
+def to_json(dct):
+    for v in dct.values():
+        if v[0] is False:
+            v[0] = 'false'
+        if v[0] is True:
+            v[0] = 'true'
+        if v[1] is False:
+            v[1] = 'false'
+        if v[1] is True:
+            v[1] = 'true'
+    return dct
+
+
 def generate_diff(file1_path, file2_path):
     dict1 = get_data(file1_path)
     dict2 = get_data(file2_path)
@@ -32,13 +45,5 @@ def generate_diff(file1_path, file2_path):
             dict3[k] = [dict1[k], ' ']
         else:
             dict3[k] = [' ', dict2[k]]
-    for v in dict3.values():
-        if v[0] is False:
-            v[0] = 'false'
-        if v[0] is True:
-            v[0] = 'true'
-        if v[1] is False:
-            v[1] = 'false'
-        if v[1] is True:
-            v[1] = 'true'
-    return to_format(dict3)
+    result = to_json(dict3)
+    return to_string(result)
