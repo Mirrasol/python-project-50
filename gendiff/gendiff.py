@@ -1,9 +1,4 @@
-import json
-
-
-def get_data(file):
-    with open(file) as file:
-        return json.load(file)
+from gendiff.parser import get_data
 
 
 def to_string(dct):
@@ -21,16 +16,16 @@ def to_string(dct):
     return result + '}'
 
 
-def to_json(dct):
+def to_plain(dct):
     for v in dct.values():
-        if v[0] is False:
-            v[0] = 'false'
-        if v[0] is True:
-            v[0] = 'true'
-        if v[1] is False:
-            v[1] = 'false'
-        if v[1] is True:
-            v[1] = 'true'
+        if isinstance(v[0], bool):
+            v[0] = str(v[0]).lower()
+        elif isinstance(v[1], bool):
+            v[1] = str(v[1]).lower()
+        elif v[0] is None:
+            v[0] = 'null'
+        elif v[1] is None:
+            v[1] = 'null'
     return dct
 
 
@@ -45,5 +40,5 @@ def generate_diff(file1_path, file2_path):
             dict3[k] = [dict1[k], ' ']
         else:
             dict3[k] = [' ', dict2[k]]
-    result = to_json(dict3)
+    result = to_plain(dict3)
     return to_string(result)
