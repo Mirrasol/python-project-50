@@ -5,6 +5,6 @@ dist/
 .venv/
 .coverage
 coverage/
-*,cover
+test-coverage-tool
 coverage.xml
 .pytest_cache/
