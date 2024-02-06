@@ -4,5 +4,7 @@ dist/
 *.pyc
 .venv/
 .coverage
+cover
+*,cover
 coverage.xml
 .pytest_cache/
