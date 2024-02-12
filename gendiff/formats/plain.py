@@ -5,7 +5,9 @@ def to_string(value):
         return 'null'
     elif isinstance(value, dict):
         return '[complex value]'
-    return f"'{str(value)}'"
+    elif isinstance(value, str):
+        return f"'{value}'"
+    return f'{value}'
 
 
 def to_plain(diff, path=''):
