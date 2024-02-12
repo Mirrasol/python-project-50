@@ -13,3 +13,7 @@
 2) Comparing YAML files:
 
 [![asciicast](https://asciinema.org/a/v8mCJmeZb7d2oYhxxYQGIEJgD.svg)](https://asciinema.org/a/v8mCJmeZb7d2oYhxxYQGIEJgD)
+
+3) Comparing trees:
+
+[![asciicast](https://asciinema.org/a/CAu0YcXSlvChkNFfFh9eBkMk4.svg)](https://asciinema.org/a/CAu0YcXSlvChkNFfFh9eBkMk4)
