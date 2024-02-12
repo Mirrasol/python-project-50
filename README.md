@@ -17,3 +17,7 @@
 3) Comparing trees:
 
 [![asciicast](https://asciinema.org/a/CAu0YcXSlvChkNFfFh9eBkMk4.svg)](https://asciinema.org/a/CAu0YcXSlvChkNFfFh9eBkMk4)
+
+4) Choosing the 'plain' format option:
+
+[![asciicast](https://asciinema.org/a/3WTC2QN04w5yvC3beATyzMzAx.svg)](https://asciinema.org/a/3WTC2QN04w5yvC3beATyzMzAx)

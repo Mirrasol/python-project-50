@@ -39,6 +39,11 @@ def to_stylish(diff, depth=1):
             lines.append(
                 f'{start_indent}  {key}: {to_stylish(children, depth + 1)}'
             )
+        elif status == 'changed':
+            lines.append(f'{start_indent}- {key}:\
+ {to_string(value[0], depth + 1, INDENT)}')
+            lines.append(f'{start_indent}+ {key}:\
+ {to_string(value[1], depth + 1, INDENT)}')
         elif status == 'deleted':
             lines.append(
                 f'{start_indent}- {key}: {to_string(value, depth + 1, INDENT)}'

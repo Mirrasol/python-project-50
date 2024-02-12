@@ -25,6 +25,9 @@ def make_diff_tree(dict1, dict2):
         elif dict1[key] == dict2[key]:
             diff.append({'status': 'unchanged', 'key': key, 'val': dict1[key]})
         elif dict1[key] != dict2[key]:
-            diff.append({'status': 'deleted', 'key': key, 'val': dict1[key]})
-            diff.append({'status': 'added', 'key': key, 'val': dict2[key]})
+            diff.append({
+                'status': 'changed',
+                'key': key,
+                'val': [dict1[key], dict2[key]],
+            })
     return diff
