@@ -1,14 +1,15 @@
 import pytest
+import json
 from gendiff.gendiff import generate_diff
 
 
-def test_generate_json():
+def test_generate_flat_json():
     with open('./tests/fixtures/result_stylish_flat.txt', 'r') as file_json:
         result = file_json.read().strip('\n')
         assert generate_diff('./tests/fixtures/file1.json', './tests/fixtures/file2.json') == result
 
 
-def test_generate_yml():
+def test_generate_flat_yml():
     with open('./tests/fixtures/result_stylish_flat.txt', 'r') as file_yml:
         result = file_yml.read().strip('\n')
         assert generate_diff('./tests/fixtures/file1.yml', './tests/fixtures/file2.yml') == result
@@ -28,3 +29,7 @@ def test_generate_plain():
         tree1 = './tests/fixtures/tree1.yml'
         tree2 = './tests/fixtures/tree2.yml'
         assert generate_diff(tree1, tree2, 'plain') == result
+
+
+def test_generate_json():
+    pass

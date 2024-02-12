@@ -21,3 +21,7 @@
 4) Choosing the 'plain' format option:
 
 [![asciicast](https://asciinema.org/a/3WTC2QN04w5yvC3beATyzMzAx.svg)](https://asciinema.org/a/3WTC2QN04w5yvC3beATyzMzAx)
+
+5) Choosing the 'JSON' format option:
+
+[![asciicast](https://asciinema.org/a/8WC32fns66Y83orIeVcmIy1jD.svg)](https://asciinema.org/a/8WC32fns66Y83orIeVcmIy1jD)
