@@ -32,4 +32,9 @@ def test_generate_plain():
 
 
 def test_generate_json():
-    pass
+    with open('./tests/fixtures/result_json.json', 'r') as file_json:
+        result = file_json.read().strip('\n')
+        tree1 = './tests/fixtures/tree1.json'
+        tree2 = './tests/fixtures/tree2.json'
+        subject = generate_diff(tree1, tree2, 'json')
+        assert subject == result
