@@ -1,5 +1,3 @@
-import pytest
-import json
 from gendiff.gendiff import generate_diff
 
 
