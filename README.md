@@ -8,26 +8,31 @@
 A concole ulitily that compares two files and shows the difference, with an option to display in a preferred format.
 
 
-1. Installation:
+## 1) Installation
 
-git clone git@github.com:Mirrasol/python-project-50.git - download the package from GitHub
+`git clone git@github.com:Mirrasol/python-project-50.git` - download the package from GitHub
 
-make package-install - install using pip from your console
+`make package-install` - install using pip from your console
 
-2. To generate the difference use the command:
 
-gendiff [-h] [-f FORMAT] first_file second_file
+## 2) General usage
 
-[-h] - requesting help message
+   To generate the difference use the command:
 
-[-f] - an optional choice of output format, from the selection of:
+`gendiff [-h] [-f FORMAT] first_file second_file`
+
+`[-h]` - requesting help message
+
+`[-f]` - an optional choice of output format, from the selection of:
  
- a) stylish (default)
- b) plain
- c) json
+  - stylish (default)
+  - plain
+  - json
 
 
-Please refer to the demo examples below:
+## 3) Demos
+
+**Please refer to the demo examples below:**
 
 
 1) Comparing JSON files:
