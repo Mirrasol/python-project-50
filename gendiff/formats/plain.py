@@ -25,9 +25,8 @@ def to_plain(diff, path=''):
             lines.append(f"Property '{path}{key}' was updated.\
  From {to_string(value[0])} to {to_string(value[1])}")
         elif status == 'deleted':
-            lines.append(
-                f"Property '{path}{key}' was removed"
-            )
+            lines.append(f"Property '{path}{key}'\
+ was removed")
         elif status == 'added':
             lines.append(f"Property '{path}{key}' was added with\
  value: {to_string(value)}")

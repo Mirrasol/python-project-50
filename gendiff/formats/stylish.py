@@ -18,8 +18,8 @@ def to_string(value, depth=1, spaces_count=INDENT):
         current_indent = ' ' * spaces_count * depth
         result = '{\n'
         for k, v in value.items():
-            result += f'{current_indent}{k}: '
-            result += f'{to_string(v, depth + 1, spaces_count)}\n'
+            result += f'{current_indent}{k}:\
+ {to_string(v, depth + 1, spaces_count)}\n'
         result += f'{" " * spaces_count * (depth - 1)}}}'
         return result
     return str(value)
