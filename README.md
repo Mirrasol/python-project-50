@@ -41,11 +41,11 @@ A concole ulitily that compares two files and shows the difference, with an opti
 
 2) Comparing YAML files:
 
-[![asciicast](https://asciinema.org/a/v8mCJmeZb7d2oYhxxYQGIEJgD.svg)](https://asciinema.org/a/v8mCJmeZb7d2oYhxxYQGIEJgD)
+[![asciicast](https://asciinema.org/a/rumI0mK5zMjXi3M2mXXCqFMeY.svg)](https://asciinema.org/a/rumI0mK5zMjXi3M2mXXCqFMeY)
 
 3) Comparing 'tree' structures:
 
-[![asciicast](https://asciinema.org/a/CAu0YcXSlvChkNFfFh9eBkMk4.svg)](https://asciinema.org/a/CAu0YcXSlvChkNFfFh9eBkMk4)
+[![asciicast](https://asciinema.org/a/QBwgGr1qbLOrn3nIVQyy30IQy.svg)](https://asciinema.org/a/QBwgGr1qbLOrn3nIVQyy30IQy)
 
 4) Choosing the 'plain' format option:
 
@@ -53,4 +53,4 @@ A concole ulitily that compares two files and shows the difference, with an opti
 
 5) Choosing the 'json' format option:
 
-[![asciicast](https://asciinema.org/a/8WC32fns66Y83orIeVcmIy1jD.svg)](https://asciinema.org/a/8WC32fns66Y83orIeVcmIy1jD)
+[![asciicast](https://asciinema.org/a/uJJlvnU5aSjuYOLUkzgweH6fL.svg)](https://asciinema.org/a/uJJlvnU5aSjuYOLUkzgweH6fL)
