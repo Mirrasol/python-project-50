@@ -1,11 +1,18 @@
+import os
 import json
 import yaml
 
 
-def get_data(file_path):
-    if file_path.endswith('.json'):
-        with open(file_path) as file:
+def get_extension(file_path):
+    head, file_name = os.path.split(file_path)
+    return file_name.split('.')[1]
+
+
+def get_data(file):
+    extension = get_extension(file)
+    if extension == 'json':
+        with open(file, 'r') as file:
             return json.load(file)
-    elif file_path.endswith(('.yml', '.yaml')):
-        with open(file_path) as file:
+    elif extension in ('yml', 'yaml'):
+        with open(file, 'r') as file:
             return yaml.safe_load(file)

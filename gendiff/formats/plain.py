@@ -1,7 +1,7 @@
 def to_string(value):
     if isinstance(value, str):
         return f"'{value}'"
-    elif isinstance(value, dict):
+    elif isinstance(value, (dict, list)):
         return '[complex value]'
     elif value is None:
         return 'null'
