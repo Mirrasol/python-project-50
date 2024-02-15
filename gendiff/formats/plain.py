@@ -9,6 +9,7 @@ def to_string(value):
 
 
 def to_plain(diff, path=''):
+    """Apply 'plain' format."""
     lines = []
     for item in diff:
         key = item.get('key')

@@ -6,7 +6,7 @@ def make_start_indent(depth):
 
 
 def make_end_indent(depth):
-    return ' ' * (depth * INDENT - 4)
+    return ' ' * ((depth - 1) * INDENT)
 
 
 def to_string(value, depth=1, spaces_count=INDENT):
@@ -26,6 +26,7 @@ def to_string(value, depth=1, spaces_count=INDENT):
 
 
 def to_stylish(diff, depth=1):
+    """Apply 'stylish' format."""
     lines = []
     start_indent = make_start_indent(depth)
     end_indent = make_end_indent(depth)

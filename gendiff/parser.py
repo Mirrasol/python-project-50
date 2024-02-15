@@ -16,3 +16,5 @@ def get_data(file):
     elif extension in ('yml', 'yaml'):
         with open(file, 'r') as file:
             return yaml.safe_load(file)
+    else:
+        return "Unsupported file format."

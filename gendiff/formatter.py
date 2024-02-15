@@ -4,6 +4,7 @@ from gendiff.formats.json import to_json
 
 
 def apply_format(diff, formatter='stylish'):
+    """Apply the specific output format."""
     if formatter == 'stylish':
         return to_stylish(diff)
     elif formatter == 'plain':
