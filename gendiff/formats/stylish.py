@@ -1,12 +1,12 @@
 INDENT = 4
 
 
-def make_start_indent(depth):
-    return ' ' * (depth * INDENT - 2)
+def make_start_indent(depth, spaces_count):
+    return ' ' * (depth * spaces_count - 2)
 
 
-def make_end_indent(depth):
-    return ' ' * ((depth - 1) * INDENT)
+def make_end_indent(depth, spaces_count):
+    return ' ' * ((depth - 1) * spaces_count)
 
 
 def to_string(value, depth=1, spaces_count=INDENT):
@@ -20,7 +20,7 @@ def to_string(value, depth=1, spaces_count=INDENT):
         for k, v in value.items():
             result += f'{current_indent}{k}:\
  {to_string(v, depth + 1, spaces_count)}\n'
-        result += f'{" " * spaces_count * (depth - 1)}}}'
+        result += f'{make_end_indent(depth, spaces_count)}}}'
         return result
     return str(value)
 
@@ -28,8 +28,8 @@ def to_string(value, depth=1, spaces_count=INDENT):
 def to_stylish(diff, depth=1):
     """Apply 'stylish' format."""
     lines = []
-    start_indent = make_start_indent(depth)
-    end_indent = make_end_indent(depth)
+    start_indent = make_start_indent(depth, INDENT)
+    end_indent = make_end_indent(depth, INDENT)
     for item in diff:
         key = item.get('key')
         value = item.get('val')
