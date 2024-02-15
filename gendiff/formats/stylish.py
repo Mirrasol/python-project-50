@@ -9,7 +9,7 @@ def make_end_indent(depth, spaces_count):
     return ' ' * ((depth - 1) * spaces_count)
 
 
-def to_string(value, depth=1, spaces_count=INDENT):
+def to_string(value, depth=1, spaces_count=1):
     if isinstance(value, bool):
         return str(value).lower()
     elif value is None:
