@@ -16,11 +16,12 @@ def to_string(value, depth=1, spaces_count=INDENT):
         return 'null'
     elif isinstance(value, dict):
         current_indent = ' ' * spaces_count * depth
+        end_indent = make_end_indent(depth, spaces_count)
         result = '{\n'
         for k, v in value.items():
             result += f'{current_indent}{k}:\
  {to_string(v, depth + 1, spaces_count)}\n'
-        result += f'{make_end_indent(depth, spaces_count)}}}'
+        result += f'{end_indent}}}'
         return result
     return str(value)
 
