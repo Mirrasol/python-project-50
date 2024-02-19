@@ -14,19 +14,19 @@ def to_plain(diff, path=''):
     for item in diff:
         key = item.get('key')
         value = item.get('val')
-        status = item.get('status')
+        node_type = item.get('type')
 
-        if status == 'nested':
+        if node_type == 'nested':
             new_path = path + f'{key}.'
             children = item.get('children')
             lines.append(to_plain(children, new_path))
-        elif status == 'changed':
+        elif node_type == 'changed':
             lines.append(f"Property '{path}{key}' was updated.\
  From {to_string(value[0])} to {to_string(value[1])}")
-        elif status == 'deleted':
+        elif node_type == 'deleted':
             lines.append(f"Property '{path}{key}'\
  was removed")
-        elif status == 'added':
+        elif node_type == 'added':
             lines.append(f"Property '{path}{key}' was added with\
  value: {to_string(value)}")
     result = '\n'.join(lines)

@@ -34,27 +34,27 @@ def to_stylish(diff, depth=1):
     for item in diff:
         key = item.get('key')
         value = item.get('val')
-        status = item.get('status')
+        node_type = item.get('type')
 
-        if status == 'nested':
+        if node_type == 'nested':
             children = item.get('children')
             lines.append(
                 f'{start_indent}  {key}: {to_stylish(children, depth + 1)}'
             )
-        elif status == 'changed':
+        elif node_type == 'changed':
             lines.append(f'{start_indent}- {key}:\
  {to_string(value[0], depth + 1, INDENT)}')
             lines.append(f'{start_indent}+ {key}:\
  {to_string(value[1], depth + 1, INDENT)}')
-        elif status == 'deleted':
+        elif node_type == 'deleted':
             lines.append(
                 f'{start_indent}- {key}: {to_string(value, depth + 1, INDENT)}'
             )
-        elif status == 'added':
+        elif node_type == 'added':
             lines.append(
                 f'{start_indent}+ {key}: {to_string(value, depth + 1, INDENT)}'
             )
-        elif status == 'unchanged':
+        elif node_type == 'unchanged':
             lines.append(
                 f'{start_indent}  {key}: {to_string(value, depth + 1, INDENT)}'
             )

@@ -1,25 +1,25 @@
 [
     {
-        "status": "nested",
+        "type": "nested",
         "key": "common",
         "children": [
             {
-                "status": "added",
+                "type": "added",
                 "key": "follow",
                 "val": false
             },
             {
-                "status": "unchanged",
+                "type": "unchanged",
                 "key": "setting1",
                 "val": "Value 1"
             },
             {
-                "status": "deleted",
+                "type": "deleted",
                 "key": "setting2",
                 "val": 200
             },
             {
-                "status": "changed",
+                "type": "changed",
                 "key": "setting3",
                 "val": [
                     true,
@@ -27,27 +27,27 @@
                 ]
             },
             {
-                "status": "added",
+                "type": "added",
                 "key": "setting4",
                 "val": "blah blah"
             },
             {
-                "status": "added",
+                "type": "added",
                 "key": "setting5",
                 "val": {
                     "key5": "value5"
                 }
             },
             {
-                "status": "nested",
+                "type": "nested",
                 "key": "setting6",
                 "children": [
                     {
-                        "status": "nested",
+                        "type": "nested",
                         "key": "doge",
                         "children": [
                             {
-                                "status": "changed",
+                                "type": "changed",
                                 "key": "wow",
                                 "val": [
                                     "",
@@ -57,12 +57,12 @@
                         ]
                     },
                     {
-                        "status": "unchanged",
+                        "type": "unchanged",
                         "key": "key",
                         "val": "value"
                     },
                     {
-                        "status": "added",
+                        "type": "added",
                         "key": "ops",
                         "val": "vops"
                     }
@@ -71,11 +71,11 @@
         ]
     },
     {
-        "status": "nested",
+        "type": "nested",
         "key": "group1",
         "children": [
             {
-                "status": "changed",
+                "type": "changed",
                 "key": "baz",
                 "val": [
                     "bas",
@@ -83,12 +83,12 @@
                 ]
             },
             {
-                "status": "unchanged",
+                "type": "unchanged",
                 "key": "foo",
                 "val": "bar"
             },
             {
-                "status": "changed",
+                "type": "changed",
                 "key": "nest",
                 "val": [
                     {
@@ -100,7 +100,7 @@
         ]
     },
     {
-        "status": "deleted",
+        "type": "deleted",
         "key": "group2",
         "val": {
             "abc": 12345,
@@ -110,7 +110,7 @@
         }
     },
     {
-        "status": "added",
+        "type": "added",
         "key": "group3",
         "val": {
             "deep": {
