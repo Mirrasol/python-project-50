@@ -1,7 +1,7 @@
 import os
 
 
-def get_extension(file_path):
+def get_file_format(file_path):
     head, file_name = os.path.split(file_path)
     return file_name.split('.')[1]
 
