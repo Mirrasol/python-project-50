@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 
-from gendiff.cli import parse
+from gendiff.cli import parse_arguments
 from gendiff import generate_diff
 
 
 def main():
-    result = parse()
+    result = parse_arguments()
     file1 = result.first_file
     file2 = result.second_file
     formatter = result.format

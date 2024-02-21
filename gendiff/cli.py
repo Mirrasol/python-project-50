@@ -1,7 +1,7 @@
 import argparse
 
 
-def parse():
+def parse_arguments():
     """Parse user arguments from the console."""
     parser = argparse.ArgumentParser(
         prog='gendiff',
